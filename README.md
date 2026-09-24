@@ -1,13 +1,13 @@
 # Pomvox Cleanup MLX
 
-Apple Silicon runtime for [Pomvox Cleanup Engine](https://github.com/pomvox/pomvox-cleanup-engine), version **0.1.0-beta.1**. This is a **beta developer SDK**, not a production-readiness certification. macOS 14+, Apple Silicon and full Xcode with Swift 6 are required.
+Apple Silicon runtime for [Pomvox Cleanup Engine](https://github.com/pomvox/pomvox-cleanup-engine), version **0.1.0-beta.2**. This is a **beta developer SDK**, not a production-readiness certification. macOS 14+, Apple Silicon and full Xcode with Swift 6 are required.
 
 ## Install
 
-Add this public repository in Xcode's **Add Package Dependencies**, selecting exact version `0.1.0-beta.1`, and add the `PomvoxCleanupMLX` product to your app target. No local checkout or submodule is required. Alternatively:
+Add this public repository in Xcode's **Add Package Dependencies**, selecting exact version `0.1.0-beta.2`, and add the `PomvoxCleanupMLX` product to your app target. No local checkout or submodule is required. Alternatively:
 
 ```swift
-.package(url: "https://github.com/pomvox/pomvox-cleanup-mlx.git", exact: "0.1.0-beta.1")
+.package(url: "https://github.com/pomvox/pomvox-cleanup-mlx.git", exact: "0.1.0-beta.2")
 // In your application target's dependencies:
 .product(name: "PomvoxCleanupMLX", package: "pomvox-cleanup-mlx")
 ```
@@ -18,7 +18,7 @@ Build through Xcode to package MLX Metal resources. Plain `swift build` does not
 
 The supported baseline snapshot is `b1f7ac8282ce060e4ad1374cb9a34750e31723c1` of [SimpleWords v3](https://huggingface.co/ReFyneLabs/simplewords-dictation-cleanup-v3). Its host currently requires accepting access conditions; anonymous inference setup is **not** promised. Obtain access and the exact snapshot yourself. Do not replace it with the latest revision: the runtime verifies all seven pinned artifacts.
 
-Bundle the trusted [pack manifest](https://github.com/pomvox/pomvox-cleanup-engine/blob/v0.1.0-beta.1/packs/simplewords-v3/pack.json) with your app, then run `PackInstaller.install(snapshot:manifestData:destination:)` off the main actor. It follows snapshot symlinks, verifies staged files, and atomically publishes a new directory. APFS cloning avoids a second physical weight copy where supported. Keep installations immutable in Application Support.
+Bundle the trusted [pack manifest](https://github.com/pomvox/pomvox-cleanup-engine/blob/v0.1.0-beta.2/packs/simplewords-v3/pack.json) with your app, then run `PackInstaller.install(snapshot:manifestData:destination:)` off the main actor. It follows snapshot symlinks, verifies staged files, and atomically publishes a new directory. APFS cloning avoids a second physical weight copy where supported. Keep installations immutable in Application Support.
 
 ```swift
 import Foundation
@@ -43,6 +43,6 @@ Keep one cleaner open across dictations. `.mlx(vocabulary:)` prewarms the cache;
 
 ## Integration and limitations
 
-Read the [integration prompt](https://github.com/pomvox/pomvox-cleanup-engine/blob/v0.1.0-beta.1/docs/pomvox-integration-prompt.md), [contract](https://github.com/pomvox/pomvox-cleanup-engine/blob/v0.1.0-beta.1/docs/contract.md), and [release notes](https://github.com/pomvox/pomvox-cleanup-engine/releases/tag/v0.1.0-beta.1). English, bounded vocabulary and the frozen prompt are supported. Style controls, auxiliary generation, unlimited output length, Intel inference and automatic cloud fallback are not supported.
+Read the [integration prompt](https://github.com/pomvox/pomvox-cleanup-engine/blob/v0.1.0-beta.2/docs/pomvox-integration-prompt.md), [contract](https://github.com/pomvox/pomvox-cleanup-engine/blob/v0.1.0-beta.2/docs/contract.md), and [release notes](https://github.com/pomvox/pomvox-cleanup-engine/releases/tag/v0.1.0-beta.2). English, bounded vocabulary and the frozen prompt are supported. Style controls, auxiliary generation, unlimited output length, Intel inference and automatic cloud fallback are not supported.
 
-This repository is a generated release distribution. Make contributions in [the source repository](https://github.com/pomvox/pomvox-cleanup-engine/tree/v0.1.0-beta.1/Runtime/MLX); `SOURCE.json` records the source tag and exported file hashes. The source repository's security policy and contribution guide apply. CI validates the public dependency graph and Xcode consumer build without downloading gated weights; real-model validation evidence and remaining production release gates are in the source repository.
+This repository is a generated release distribution. Make contributions in [the source repository](https://github.com/pomvox/pomvox-cleanup-engine/tree/v0.1.0-beta.2/Runtime/MLX); `SOURCE.json` records the source tag and exported file hashes. The source repository's security policy and contribution guide apply. CI validates the public dependency graph and Xcode consumer build without downloading gated weights; real-model validation evidence and remaining production release gates are in the source repository.

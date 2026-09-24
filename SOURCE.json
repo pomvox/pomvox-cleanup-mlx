@@ -1,14 +1,14 @@
 {
   "repository": "https://github.com/pomvox/pomvox-cleanup-engine",
-  "tag": "v0.1.0-beta.1",
+  "tag": "v0.1.0-beta.2",
   "filesSHA256": {
-    ".github/workflows/ci.yml": "293e3394ee3124b5c4a671d46493c5df5ad5784d622e7f0d86235dc12d909766",
+    ".github/workflows/ci.yml": "04ebd4d9a3a72cecc2a378ed83844499b99b28afddfcc8be2a00ff2ca433277d",
     ".gitignore": "19c9d9d584367dddf79304a062bdd371aefc377deaf273c09b5c3d1d2a5e6629",
     "Examples/Consumer/Sources/Consumer/Consumer.swift": "c34d6624629a74e49ae5653a513ff5f20745dc604069a1b99a12acffb04a89ee",
     "Examples/Consumer/project.yml": "8cd0ce204d155f090207a2f88adbf66de109f710e12310befec4ad1b86775781",
     "LICENSE": "bfc49933cccb385e76d20379f6c770884a1c590f23b9bee1468af265008368a8",
-    "Package.swift": "659a36297bf1bd16e2ccd5ea976248b760002f9947f579ca2bea19bc19651231",
-    "README.md": "a9ad1d2db5b070b8af1a9852dee5fa6dee0a5678d73dce76a9e90ce1ac0f1fa5",
+    "Package.swift": "fb74b3a06a8c009ee361279a7287cef2e5bf4ddd12f1f03fe402ab2dd7aa3fb4",
+    "README.md": "8c34ddaa3ba0e452b0c31c25f8dd2360c898e0d9210d08e3e8c0d4dfcb3d2575",
     "Sources/PomvoxCleanupMLX/CleanupGenStats.swift": "b0cbfb888885eb24a6fe3d27fe1ff8b943e18555cdbbbe826b11aa5df71e8f45",
     "Sources/PomvoxCleanupMLX/MLXRuntime.swift": "2894e1f89d2b1956ff53fabfb09415b8da61231288b3ca8474ab967d54ae8dd7",
     "Sources/PomvoxCleanupMLX/PromptLookupDrafter.swift": "6d6ae6aed08c60926a4b3d7f1ef03ab46dd2c36586636f62f3a0475bcee266b3",
@@ -22,6 +22,6 @@
     "Tests/PomvoxCleanupMLXTests/ModelDifferentialTests.swift": "4d14a8065d53561831587f5b724f812bc866eafaecb5429ce166eee4740b010d",
     "Tests/PomvoxCleanupMLXTests/PromptLookupDrafterTests.swift": "5a305a03007cecc0a8da11ff99ca3a058d1aad34ef6707061866a18d37554bf4",
     "Tests/PomvoxCleanupMLXTests/SpeculativeDecoderPolicyTests.swift": "e9e5fa4516435e7cf7145029341e67220098018df1b1ba9665d7ecc7d06d5363",
-    "VERSION": "4e88cc3269b627623363806a15dd3e407dc458db7669a9a918255e109bbe89c3"
+    "VERSION": "ca903aaa0acace16e7daf4d63278144f2b3a47ff33ab31dd687d8320502556fe"
   }
 }

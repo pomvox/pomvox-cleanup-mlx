@@ -6,7 +6,7 @@ let package = Package(
     platforms: [.macOS(.v14)],
     products: [.library(name: "PomvoxCleanupMLX", targets: ["PomvoxCleanupMLX"])],
     dependencies: [
-        .package(url: "https://github.com/pomvox/pomvox-cleanup-engine.git", exact: "0.1.0-beta.1"),
+        .package(url: "https://github.com/pomvox/pomvox-cleanup-engine.git", exact: "0.1.0-beta.2"),
         .package(url: "https://github.com/ml-explore/mlx-swift", exact: "0.31.4"),
         .package(url: "https://github.com/ml-explore/mlx-swift-lm.git", exact: "3.31.4"),
         .package(url: "https://github.com/DePasqualeOrg/swift-tokenizers-mlx.git", exact: "0.3.0"),
@@ -18,6 +18,8 @@ let package = Package(
             .product(name: "MLXLLM", package: "mlx-swift-lm"),
             .product(name: "MLXLMCommon", package: "mlx-swift-lm"),
             .product(name: "MLXLMTokenizers", package: "swift-tokenizers-mlx"),
+            // Keep the exact tokenizer constraint active for transitive consumers.
+            .product(name: "Tokenizers", package: "swift-tokenizers"),
         ]),
         .testTarget(name: "PomvoxCleanupMLXTests", dependencies: ["PomvoxCleanupMLX"]),
     ],
