@@ -3,10 +3,10 @@ import PackageDescription
 
 let package = Package(
     name: "PomvoxCleanupMLX",
-    platforms: [.macOS(.v14)],
+    platforms: [.macOS(.v14), .iOS(.v17)],
     products: [.library(name: "PomvoxCleanupMLX", targets: ["PomvoxCleanupMLX"])],
     dependencies: [
-        .package(url: "https://github.com/pomvox/pomvox-cleanup-engine.git", exact: "0.1.0-beta.2"),
+        .package(url: "https://github.com/pomvox/pomvox-cleanup-engine.git", exact: "0.2.0-beta.1"),
         .package(url: "https://github.com/ml-explore/mlx-swift", exact: "0.31.4"),
         .package(url: "https://github.com/ml-explore/mlx-swift-lm.git", exact: "3.31.4"),
         .package(url: "https://github.com/DePasqualeOrg/swift-tokenizers-mlx.git", exact: "0.3.0"),
