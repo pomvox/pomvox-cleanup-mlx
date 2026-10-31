@@ -8,7 +8,7 @@ the vault wins over this file, and this file wins over an issue's text.
 
 Pomvox Cleanup MLX is the Apple Silicon runtime for the Pomvox Cleanup Engine,
 published as the `PomvoxCleanupMLX` Swift package at exact version `VERSION`
-(0.2.0-beta.1) so apps can consume it remotely with no submodule. It pulls the
+(0.2.0-beta.2) so apps can consume it remotely with no submodule. It pulls the
 core SDK (`pomvox-cleanup-engine`) at the matching exact version and pins its
 MLX dependencies.
 
